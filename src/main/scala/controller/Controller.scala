@@ -28,10 +28,12 @@ object Controller extends JFXApp {
 
   def calcTraits(seed: LongProperty): TraitValues = {
     val randomGenerator = new Random(seed())
-    for {
-      (name, traitExpr) <- BD.traitExpression
-      value = evalTrait(traitExpr, randomGenerator)
-    } yield name -> value
+    SortedMap.empty(BD.traitOrder) ++ {
+      for {
+        (name, traitExpr) <- BD.traitExpression
+        value = evalTrait(traitExpr, randomGenerator)
+      } yield name -> value
+    }
   }
 
   private def evalTrait(e: Trait, r: Random): Int =
