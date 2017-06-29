@@ -1,0 +1,43 @@
+.grid-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 3;
+    -fx-padding: 20;
+    -fx-alignment: center-left;
+}
+.info-name {
+    -fx-max-width: Infinity
+}
+.value-label {
+    -fx-max-width: 50;
+    -fx-border-width: 2;
+    -fx-border-color: gold;
+}
+.info-value {
+    -fx-pref-width: 100pt;
+}
+.expression {
+    -fx-min-width: 40pt;
+}
+.skill-field {
+    -fx-max-width: 20pt;
+    -fx-border-width: 2;
+    -fx-border-color: gold;
+    -fx-padding: 0;
+}
+#top-line {
+    -fx-spacing: 100;
+}
+
+.titled-pane {
+    -fx-text-fill: white;
+    -fx-collapsible: false;
+    -fx-animated: false;
+}
+.titled-pane > .title 
+{
+    -fx-background-color: black;
+}
+.titled-pane > *.content 
+{
+    -fx-background-color: white;
+}
